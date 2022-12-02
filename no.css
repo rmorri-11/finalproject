@@ -1,0 +1,167 @@
+/*Rose Morris*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end reset*/
+header nav{
+	padding: 0;
+	grid-area: menu;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	position: relative;
+ }
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER */
+#hamnav {
+	width: 60%;
+	background: #F6D64A;
+  }
+  
+  /* (B) HORIZONTAL MENU ITEMS */
+  #hamitems { display: flex; }
+  #hamitems a {
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+  }
+  #hamitems a:hover { background: #af0d0d; }
+  
+  /* (C) HIDE HAMBURGER */
+  #hamnav label, #hamburger { display: none; }
+ header{
+    background: linear-gradient( var(--teal), var(--white));
+    color: #000000;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas: 'logo menu'
+                         'h1 h1'
+                         'header header';
+}
+header p{
+	grid-row:3;
+}
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+	/* (A) BREAK INTO VERTICAL MENU */
+	#hamitems a {
+	  box-sizing: border-box;
+	  display: block;
+	  width: 100%;
+	  border-top: 1px solid #333;
+	}
+   
+	/* (B) SHOW HAMBURGER ICON */
+	#hamnav label { 
+	  display: inline-block; 
+	  color: white;
+	  font-style: normal;
+	  font-size: 1.2em;
+	  padding: 10px;
+	}
+  
+	/* (C) TOGGLE SHOW/HIDE MENU */
+#hamitems { 
+	display: none; 
+}
+#hamnav input:checked ~ #hamitems { 
+	display: block; 
+}
+  }
+/*endhamnav*/
+:root{
+	text-align:center;
+	padding:30px;
+	margin:20px;
+}
+p{
+	font-family: 'Comfortaa', cursive;
+	padding:20px;
+}
+h1, h2, h3{
+	font-family: 'Comfortaa', cursive;
+	font-weight:700;
+	font-size:25px;
+	padding:20px;
+}
+.about img{
+	position: relative;
+	height:500px;
+}
+.about h1 p{
+	position: absolute;
+}
+.space img{
+	height:500px;
+}
+.plants img{
+	height:500px;
+}
+.happy img{
+	height:500px;
+}
+.feelings img{
+	height:500px;
+}
+.hero img{
+	height:500px;
+}
+form{
+	padding:20px;
+	
+}
+footer{
+	background:#DAD3B7;
+}
+footer p{
+	padding:30px;
+}
